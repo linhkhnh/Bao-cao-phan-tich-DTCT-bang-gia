@@ -142,7 +142,7 @@ svg.sc{width:100%;height:auto;display:block;margin-top:8px}.sc .gx{stroke:#ECECE
 .evc{border:1.5px dashed var(--b200);border-radius:14px;padding:14px;display:grid;gap:8px;align-content:start}.evc h4{margin:0;font-size:14px}.evc p{margin:0;font-size:12.5px;color:var(--ink2)}.evc p b{color:var(--ink);font-weight:600}.evc a{color:var(--brand)}
 .pulse{animation:pls 1.1s ease-out 2;border-color:var(--brand)!important}@keyframes pls{0%{box-shadow:0 0 0 0 #91121c66}100%{box-shadow:0 0 0 14px #91121c00}}
 #sins li{cursor:pointer}#sins li:hover,#sins li.act{border-color:var(--brand);background:var(--b50)}
-@media(min-width:961px){#pa1 .hd>div:first-child{position:sticky;top:64px}}
+@media(min-width:961px){#pa1 .hd>div:first-child{position:sticky;top:128px}}
 .two .evc h4,.two .qb h4{text-align:left}.two .qb h4{font-size:12px;color:var(--ink3);font-weight:600}.two .evc h4{font-size:14px;color:var(--ink)}
 .ctas .cta{flex-direction:column;align-items:flex-start;justify-content:space-between}
 .flash{border-color:var(--brand)!important;background:var(--b50)!important;animation:pls 1s ease-out 3}
@@ -159,6 +159,16 @@ svg.sc{width:100%;height:auto;display:block;margin-top:8px}.sc .gx{stroke:#ECECE
 .swt p{margin:0;font-size:12.3px;color:var(--ink2)}
 .br{display:grid;gap:4px}.br div{display:grid;grid-template-columns:44px minmax(0,1fr) 46px;gap:6px;align-items:center;font-size:11.5px}.br i{height:7px;border-radius:4px;background:#fff;overflow:hidden;display:block}.br em{display:block;height:100%;border-radius:4px}.br b{text-align:right;font-weight:600}
 .two .prc h4{text-align:left;color:var(--ink)}.two .posc h4{font-size:15.5px}.two #pr-community h4,.two #pr-pro h4{font-size:14px}
+
+.subnav{position:sticky;top:50px;z-index:20;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#fff;border:1px solid var(--line);border-radius:0 0 16px 16px;box-shadow:0 6px 16px #24252712;margin:-4px 0 16px;overflow:hidden}
+.subnav button{display:flex;gap:10px;align-items:center;border:0;background:none;font:inherit;text-align:left;padding:11px 16px 12px;cursor:pointer;color:var(--ink2);position:relative;min-width:0}
+.subnav button+button{border-left:1px solid var(--line)}
+.subnav button:hover{background:var(--bg)}
+.subnav i{flex:none;font-style:normal;width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:12.5px;font-weight:700;background:var(--bg);color:var(--ink3)}
+.subnav span{display:grid;min-width:0}.subnav b{font-size:14px;color:var(--ink);font-weight:600}.subnav small{font-size:11.5px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.subnav button.on{background:var(--b50)}.subnav button.on b{color:var(--brand)}.subnav button.on i{background:var(--brand);color:#fff}
+.subnav button.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--brand)}
+@media(max-width:640px){.subnav button{flex-direction:column;gap:4px;padding:8px 6px 10px;text-align:center}.subnav small{display:none}.subnav b{font-size:12.5px}.subnav i{width:22px;height:22px;font-size:11.5px}}
 #s5{cursor:pointer}.tile.pf{display:block}.tile.pf p{margin:4px 0 0;font-size:12.5px;color:var(--ink2)}</style></head><body>
 <div class="bar"><h1>Audit đối thủ · Bảng giá</h1><nav><button data-tab="m">Phương pháp</button><button data-tab="d">Phân tích</button><button data-tab="o">Đề xuất</button></nav></div>
 <main>
@@ -182,7 +192,7 @@ svg.sc{width:100%;height:auto;display:block;margin-top:8px}.sc .gx{stroke:#ECECE
   <div class="ctas"><a class="cta" href="#" data-goto="a1"><div><b>Xem phân tích</b><span>Chấm điểm 9 sản phẩm, số liệu performance và đối chiếu với nghiên cứu 2024.</span></div><em>Xem phân tích →</em></a><a class="cta alt" href="#" data-goto="overview"><div><b>Xem đề xuất cho Bảng giá DNSE</b><span>Định vị sản phẩm, 6 đề xuất cải thiện và 2 hướng cần đánh giá thêm.</span></div><em>Xem đề xuất →</em></a></div>
 </section>
 <div id="dt" hidden>
- <div class="seg" id="sub"><button data-sub="a1">Chấm điểm đối thủ</button><button data-sub="a2">Performance</button><button data-sub="a3">So sánh 2024</button></div>
+ <nav class="subnav" id="sub" aria-label="Các phần phân tích"><button data-sub="a1"><i>1</i><span><b>Chấm điểm đối thủ</b><small>9 sản phẩm × 5 bước × 4 góc nhìn</small></span></button><button data-sub="a2"><i>2</i><span><b>Performance</b><small>Similarweb · Semrush</small></span></button><button data-sub="a3"><i>3</i><span><b>So sánh 2024</b><small>Đã khắc phục gì, điểm yếu mới</small></span></button></nav>
  <div class="card pn" id="pa1">
   <div class="hd">
    <div>
